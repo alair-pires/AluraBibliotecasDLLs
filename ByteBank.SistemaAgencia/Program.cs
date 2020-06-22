@@ -12,8 +12,12 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(847, 615328);                        
-            Console.WriteLine(conta.Numero);
+            DateTime dataFimPagamento = new DateTime(2020, 7, 30);
+            DateTime dataCorrente = DateTime.Now;
+            TimeSpan diferenca = dataFimPagamento - dataCorrente;
+
+            Console.WriteLine(dataCorrente);
+            Console.WriteLine(dataFimPagamento);
 
             Console.ReadLine();
         }
